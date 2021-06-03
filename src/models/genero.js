@@ -17,13 +17,13 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
 
-    Genero.associate = models =>{
-        Genero.hasMany(models.Artista, {foreignKey: 'idGenero' });
-    };
+    // Genero.associate = models =>{
+    //     Genero.hasMany(models.Artista, {foreignKey: 'idGenero' });
+    // };
 
-    Genero.associate = models =>{
-        Genero.hasMany(models.Cancion, {foreignKey: 'idGenero' });
-    };
+    // Genero.associate = models =>{
+    //     Genero.hasMany(models.Cancion, {foreignKey: 'idGenero' });
+    // };
 
     return Genero;
 }

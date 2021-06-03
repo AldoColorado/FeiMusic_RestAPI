@@ -14,27 +14,19 @@ module.exports = (sequelize, DataTypes) => {
         password: {
             type: Sequelize.STRING(150),
             allowNull : false
-        },
-        idConsumidor: {
-            type: Sequelize.BIGINT,
-            foreignKey: true
-        },
-        idArtista: {
-            type: Sequelize.BIGINT,
-            foreignKey: true
         }
     },{
         freezeTableName: true,     //Model tablename will be the same as the model
         timestamps: false
     });
 
-    Cuenta.associate = models =>{
-        Cuenta.belongsTo(models.Consumidor, {foreignKey: "idConsumidor"});
-    };
+    // Cuenta.associate = models =>{
+    //     Cuenta.hasOne(models.Consumidor, {foreignKey: "username"});
+    // };
 
-    Cuenta.associate = models =>{
-        Cuenta.belongsTo(models.Artista, {foreignKey: "idArtista"});
-    };
+    // Cuenta.associate = models =>{
+    //     Cuenta.hasOne(models.Artista, {foreignKey: "username"});
+    // };
 
     return Cuenta;
 }

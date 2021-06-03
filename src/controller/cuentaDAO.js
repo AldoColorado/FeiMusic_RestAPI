@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const { check, validationResult} = require('express-validator');
 
 
+
+
 module.exports = {
     async getCuentas(req, res) {
         return database.Cuenta.findAll().then(cuentas => res.send(cuentas));
@@ -14,7 +16,14 @@ module.exports = {
             where: {
                 username : req.params.username
             }
-        }).then(cuenta => res.send(cuenta));
+        }).then(cuenta => 
+            {
+                if(!cuenta){
+                    res.sendStatus(404);
+                }else{
+                    res.send(cuenta);
+                }
+            });
     },
 
     async createCuenta(req, res) {
@@ -27,7 +36,8 @@ module.exports = {
                     }else{
                         res.sendStatus(200);
                     }
-        });
+                }
+        );
     },
 
     async deleteCuenta(req, res) {
