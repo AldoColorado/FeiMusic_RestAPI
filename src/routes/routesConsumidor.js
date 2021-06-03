@@ -1,12 +1,12 @@
 const express = require('express');
-const router = express.Router();
+const routerConsumidor = express.Router();
 const controller = require("../controller/consumidorDAO");
 
-router.get('/Consumidor', controller.getConsumidores);
-router.get('/Consumidor/:idConsumidor', controller.getConsumidor);
-router.post('/Consumidor', controller.createConsumidor);
-router.delete('/Consumidor/:idConsumidor', controller.deleteConsumidor);
-router.put('/Consumidor/:idConsumidor', controller.updateConsumidor);
+routerConsumidor.get('/Consumidor', controller.getConsumidores);
+routerConsumidor.get('/Consumidor/:idConsumidor', controller.getConsumidor);
+routerConsumidor.post('/Consumidor', controller.createConsumidor);
+routerConsumidor.delete('/Consumidor/:idConsumidor', controller.deleteConsumidor);
+routerConsumidor.put('/Consumidor/:idConsumidor', controller.updateConsumidor);
 
 
-module.exports = router;
+module.exports = routerConsumidor;

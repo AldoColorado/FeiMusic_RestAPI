@@ -8,19 +8,31 @@ module.exports = {
         database.Cuenta.findOne({where: 
             {username: req.body.username}
         }).then(cuenta => {
+            if(cuenta == null){
+                return res.json({
+                    error: true,
+                    status: 'Usuario o contrasenia incorrecta'
+                })
+            }
+
             if(!cuenta.username || !cuenta.password){
                 return res.json({
                     error: true,
-                    message: 'Username or passw.'
+                    status: 'Usuario o contrasenia incorrecta'
                 });
             }else{
                 const contraseniaCorrecta = bcrypt.compareSync(req.body.password, cuenta.password, 10);
                 if(contraseniaCorrecta){  
-                    return res.json({succes: token(cuenta)})     
+                    return res.json({
+                        username: cuenta.username,
+                        correo: cuenta.correo,
+                        authToken: token(cuenta),
+                        status: 'Success'
+                    })     
                 }else{
                     return res.json({
                         error: true,
-                        message: 'Username or password is wrong.'
+                        status: 'Usuario o contrasenia incorrecta'
                     })
                 }
             }

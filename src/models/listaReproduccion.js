@@ -17,9 +17,9 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
    
-    ListaReproduccion.associate = models =>{
-        ListaReproduccion.belongsToMany(models.Cancion, {through: 'ListaCancion', foreignKey: 'idListaReproduccion', otherKey: 'idCancion'});
-    };
+    // ListaReproduccion.associate = models =>{
+    //     ListaReproduccion.belongsToMany(models.Cancion, {through: 'ListaCancion', foreignKey: 'idListaReproduccion', otherKey: 'idCancion'});
+    // };
 
     return ListaReproduccion;
 }
