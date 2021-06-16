@@ -4,11 +4,13 @@ const routesArtista = require('./routesArtista');
 const routesConsumidor = require('./routesConsumidor');
 const routesAlbum = require('./routesAlbum');
 const routesAuth = require('./routesAuth');
+const routesCancion = require('./routesCancion')
 
 module.exports = {
     routesCuenta : routesCuenta,
     routesArtista : routesArtista,
     routesConsumidor : routesConsumidor,
     routesAlbum : routesAlbum,
-    routesAuth : routesAuth
+    routesAuth : routesAuth,
+    routesCancion : routesCancion
 }

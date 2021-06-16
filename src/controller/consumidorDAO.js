@@ -30,7 +30,8 @@ module.exports = {
         return database.Consumidor.create({
             idConsumidor: req.body.idConsumidor,
             nombre: req.body.nombre,
-            apellidos: req.body.apellidos
+            apellidos: req.body.apellidos,
+            username: req.body.username
         }).then(submitedConsumidor => res.send(submitedConsumidor));
     },
 
