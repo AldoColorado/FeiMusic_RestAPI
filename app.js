@@ -6,15 +6,18 @@ const PORT = process.env.PORT || 4000;
 const verifyToken = require('./src/routes/middlewares');
 
 
-const app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
-app.use(routes.routesCuenta);
-app.use(routes.routesConsumidor);
-app.use(routes.routesArtista);
-app.use(routes.routesConsumidor);
-app.use(routes.routesAuth);
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json({limit: "50mb", parameterLimit: 500000000 }));
+
+app.use('/feimusic', routes.routesCuenta);
+app.use('/feimusic', routes.routesConsumidor);
+app.use('/feimusic', routes.routesArtista);
+app.use('/feimusic', routes.routesConsumidor);
+app.use('/feimusic', routes.routesAuth);
+app.use('/feimusic', routes.routesCancion);
 
 db.sequelize.sync().then(() => {
     app.listen(PORT, () => {

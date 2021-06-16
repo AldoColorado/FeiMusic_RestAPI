@@ -19,7 +19,8 @@ module.exports = {
             idArtista: req.body.idArtista,
             nombreArtista: req.body.nombreArtista,
             imagenArtista: req.body.imagenArtista,
-            verificado: req.body.verificado
+            descripcion: req.body.descripcion,
+            username: req.body.username    
         }).then(submitedArtista => res.send(submitedArtista));
     },
 

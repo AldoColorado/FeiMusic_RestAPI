@@ -11,14 +11,14 @@ module.exports = (sequelize, DataTypes) => {
         nombre: {
             type: Sequelize.STRING(50),
             allowNull : false
-        },
+        },  
     },{
         freezeTableName: true,     //Model tablename will be the same as the model
         timestamps: false
     });
 
     // Genero.associate = models =>{
-    //     Genero.hasMany(models.Artista, {foreignKey: 'idGenero' });
+    //     Gener    o.hasMany(models.Artista, {foreignKey: 'idGenero' });
     // };
 
     // Genero.associate = models =>{
