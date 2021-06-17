@@ -1,5 +1,6 @@
 const express = require('express');
-const database = require("../models")
+const database = require("../models");
+const consumidor = require('../models/consumidor');
 
 module.exports = {
     async getArtistas(req, res) {
@@ -9,9 +10,21 @@ module.exports = {
     async getArtista(req, res) {
         return database.Artista.findAll({
             where: {
-                idArtista : req.params.idArtista
+                username : req.params.username
             }
-        }).then(artista => res.send(artista));
+        }).then(artista => {
+            if(artista == null){
+                res.json({
+                    status: 'Not found'
+                })
+            }else{
+                res.json({
+                   idArtista: artista.idArtista,
+                   nombreArtista: artista.nombreArtista,
+                   status: 'Success' 
+                })
+            }
+        });
     },
 
     async createArtista(req, res) {

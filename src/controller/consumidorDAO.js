@@ -15,13 +15,21 @@ module.exports = {
     async getConsumidor(req, res) {
         return database.Consumidor.findOne({
             where: {
-                idConsumidor : req.params.idConsumidor
+                username : req.params.username
             }
         }).then(consumidor => {
             if(!consumidor){
-                res.sendStatus(404);
+                res.json({
+                    status: 'Not found'
+                });
             }else{
-                res.send(consumidor);
+                res.json({
+                    idConsumidor: consumidor.idConsumidor,
+                    nombre: consumidor.nombre,
+                    apellidos: consumidor.apellidos,
+                    username: consumidor.username,
+                    status: "Success"
+                });
             }
         })
     },
