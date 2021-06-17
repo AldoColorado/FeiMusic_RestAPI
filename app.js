@@ -5,8 +5,6 @@ const routes = require('./src/routes/routes');
 const PORT = process.env.PORT || 4000;
 const verifyToken = require('./src/routes/middlewares');
 
-
-
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));

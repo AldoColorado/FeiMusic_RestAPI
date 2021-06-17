@@ -8,20 +8,20 @@ module.exports = {
     },
 
     async getArtista(req, res) {
-        return database.Artista.findAll({
+        database.Artista.findOne({
             where: {
                 username : req.params.username
             }
         }).then(artista => {
             if(artista == null){
-                res.json({
+                return res.json({
                     status: 'Not found'
                 })
             }else{
-                res.json({
-                   idArtista: artista.idArtista,
-                   nombreArtista: artista.nombreArtista,
-                   status: 'Success' 
+                return res.json({
+                   idArtista : artista.idArtista,
+                   nombreArtista : artista.nombreArtista,
+                   status : 'Success' 
                 })
             }
         });

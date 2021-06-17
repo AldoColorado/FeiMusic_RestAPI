@@ -18,12 +18,12 @@ module.exports = {
                 username : req.params.username
             }
         }).then(consumidor => {
-            if(!consumidor){
-                res.json({
+            if(consumidor == null){
+                return res.json({
                     status: 'Not found'
                 });
             }else{
-                res.json({
+                return res.json({
                     idConsumidor: consumidor.idConsumidor,
                     nombre: consumidor.nombre,
                     apellidos: consumidor.apellidos,

@@ -7,7 +7,7 @@ module.exports = {
     },
 
     async getAlbum(req, res) {
-        return database.Album.findAll({
+        return database.Album.findOne({
             where: {
                 idAlbum : req.params.idAlbum
             }
