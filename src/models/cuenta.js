@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         password: {
             type: Sequelize.STRING(150),
             allowNull : false
+        },
+        tipoUsuario: {
+            type: Sequelize.STRING(50),
+            allowNull: false
         }
     },{
         freezeTableName: true,     //Model tablename will be the same as the model
