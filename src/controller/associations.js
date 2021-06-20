@@ -37,3 +37,4 @@ database.Suscripcion.belongsTo(database.Consumidor, {foreignKey: 'idConsumidor' 
 database.Consumidor.hasMany(database.ListaReproduccion, {foreignKey: "idConsumidor"});
 database.ListaReproduccion.belongsTo(database.Consumidor, {foreignKey: "idConsumidor"});
 
+database.SongLike.hasOne(database.Cancion, {foreignKey: "idCancion"});
