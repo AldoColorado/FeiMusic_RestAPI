@@ -16,6 +16,10 @@ app.use('/feimusic', routes.routesArtista);
 app.use('/feimusic', routes.routesConsumidor);
 app.use('/feimusic', routes.routesAuth);
 app.use('/feimusic', routes.routesCancion);
+app.use('/feimusic', routes.routesSongLike);
+app.use('/feimusic', routes.routesAlbumLike);
+app.use('/feimusic', routes.routesArtistLike);
+
 
 db.sequelize.sync().then(() => {
     app.listen(PORT, () => {

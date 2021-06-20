@@ -5,6 +5,9 @@ const routesConsumidor = require('./routesConsumidor');
 const routesAlbum = require('./routesAlbum');
 const routesAuth = require('./routesAuth');
 const routesCancion = require('./routesCancion')
+const routesSongLike = require('./routesSongLike');
+const routesAlbumLike = require('./routesAlbumLike');
+const routesArtistLike = require('./routesArtistLike')
 
 module.exports = {
     routesCuenta : routesCuenta,
@@ -12,5 +15,8 @@ module.exports = {
     routesConsumidor : routesConsumidor,
     routesAlbum : routesAlbum,
     routesAuth : routesAuth,
-    routesCancion : routesCancion
+    routesCancion : routesCancion,
+    routesSongLike : routesSongLike,
+    routesAlbumLike : routesAlbumLike,
+    routesArtistLike : routesArtistLike
 }
