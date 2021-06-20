@@ -8,11 +8,24 @@ module.exports = {
     },
 
     async getCancion(req, res) {
-        return database.Cancion.findAll({
+        return database.Cancion.findOne({
             where: {
                 idCancion : req.params.idCancion
             }
-        }).then(cancion => res.send(cancion));
+        }).then(cancion => {
+            if(cancion == null){
+                return res.json({
+                    status: "Not found"
+                })
+            }else{
+                return res.json({
+                    idCancion : cancion.idCancion,
+                    nombreCancion: cancion.nombreCancion,
+                    //imagenCancion: cancion.imagenCancion,
+                    track: cancion.track
+                });
+            }
+        });
     },
 
     async createCancion(req, res) {
