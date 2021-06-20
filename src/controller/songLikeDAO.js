@@ -6,6 +6,10 @@ module.exports = {
     
     async getSongLike(req, res) {
         return database.SongLike.findAll({
+            include: {
+                model: database.Cancion,
+                attributes: ['idCancion', 'nombreCancion', 'imagenCancion']
+            },
             where: {
                 idConsumidor : req.params.idConsumidor
             }

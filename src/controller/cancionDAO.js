@@ -4,11 +4,14 @@ const database = require("../models")
 module.exports = {
 
     async getCanciones(req, res) {
-        return database.Cancion.findAll().then(canciones => res.send(canciones));
+        return database.Cancion.findAll({
+            attributes: ['idCancion', 'nombreCancion', 'imagenCancion']
+        }).then(canciones => res.send(canciones))
     },
 
     async getCancion(req, res) {
         return database.Cancion.findOne({
+            attributes: ['idCancion', 'nombreCancion', 'imagenCancion'],
             where: {
                 idCancion : req.params.idCancion
             }
@@ -18,15 +21,28 @@ module.exports = {
                     status: "Not found"
                 })
             }else{
-                return res.json({
-                    idCancion : cancion.idCancion,
-                    nombreCancion: cancion.nombreCancion,
-                    //imagenCancion: cancion.imagenCancion,
-                    track: cancion.track
-                });
+                return res.send(cancion);
             }
         });
     },
+
+    async buscarCancion(req, res) {
+        return database.Cancion.findAll({
+            attributes: ['idCancion', 'nombreCancion', 'imagenCancion'],
+            where: {
+                nombreCancion : req.params.nombreCancion
+            }
+        }).then(canciones => {
+            if(canciones == null){
+                return res.json({
+                    status: "Not found"
+                })
+            }else{
+                return res.send(canciones)
+            }
+        });
+    },
+
 
     async createCancion(req, res) {
             return database.Cancion.create({
