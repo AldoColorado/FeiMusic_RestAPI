@@ -8,7 +8,7 @@ module.exports = {
         return database.SongLike.findAll({
             include: {
                 model: database.Cancion,
-                attributes: ['idCancion', 'nombreCancion', 'imagenCancion']
+                attributes: ['idCancion', 'nombreCancion']
             },
             where: {
                 idConsumidor : req.params.idConsumidor
