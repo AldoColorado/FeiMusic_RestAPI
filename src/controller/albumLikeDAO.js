@@ -6,6 +6,11 @@ module.exports = {
     
     async getAlbumLike(req, res) {
         return database.AlbumLike.findAll({
+            attributes: ['idAlbum'],
+            include: {
+                 model: database.Album,
+                 attributes: ['nombreAlbum']  
+            },
             where: {
                 idConsumidor : req.params.idConsumidor
             }
@@ -18,7 +23,6 @@ module.exports = {
             idConsumidor: req.body.idConsumidor
         }).then(submitedAlbumLike => res.send(submitedAlbumLike));
     }
-
 
 }
 
