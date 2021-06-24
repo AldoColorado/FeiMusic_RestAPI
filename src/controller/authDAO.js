@@ -14,7 +14,6 @@ module.exports = {
                     status: 'Usuario o contrasenia incorrecta'
                 })
             }
-
             if(!cuenta.username || !cuenta.password){
                 return res.json({
                     error: true,
@@ -25,8 +24,8 @@ module.exports = {
                 if(contraseniaCorrecta){  
                     return res.json({
                         username: cuenta.username,
-                        correo: cuenta.correo,
                         authToken: token(cuenta),
+                        tipoUsuario: cuenta.tipoUsuario,
                         status: 'Success'
                     })     
                 }else{

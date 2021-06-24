@@ -3,7 +3,7 @@ const routerCuenta = express.Router();
 const controller = require('../controller/cuentaDAO');
 const verifyToken = require('./middlewares');
 
-routerCuenta.get(('/Cuenta'),controller.getCuentas);
+routerCuenta.get('/Cuenta',controller.getCuentas);
 routerCuenta.get('/Cuenta/:username', controller.getCuenta);
 routerCuenta.post('/Cuenta',controller.createCuenta);
 routerCuenta.delete('/Cuenta/:username', controller.deleteCuenta);

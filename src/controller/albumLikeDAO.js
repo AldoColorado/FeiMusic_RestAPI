@@ -9,7 +9,7 @@ module.exports = {
             attributes: ['idAlbum'],
             include: {
                  model: database.Album,
-                 attributes: ['nombreAlbum']  
+                 attributes: ['nombreAlbum', 'imagenAlbum', 'anioLanzamiento']  
             },
             where: {
                 idConsumidor : req.params.idConsumidor

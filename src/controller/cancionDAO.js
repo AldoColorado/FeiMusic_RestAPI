@@ -11,7 +11,7 @@ module.exports = {
 
     async getCancion(req, res) {
         return database.Cancion.findOne({
-            attributes: ['idCancion', 'nombreCancion'],
+            attributes: ['idCancion', 'nombreCancion', 'imagenCancion'],
             where: {
                 idCancion : req.params.idCancion
             }
