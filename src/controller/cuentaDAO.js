@@ -7,6 +7,7 @@ const { check, validationResult} = require('express-validator');
 module.exports = {
     async getCuentas(req, res) {
         return database.Cuenta.findAll().then(cuentas => res.send(cuentas));
+        
     },
 
     async getCuenta(req, res){
