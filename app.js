@@ -3,7 +3,7 @@ const db = require('./src/models');
 require('./src/controller/associations');
 const routes = require('./src/routes/routes');
 const PORT = process.env.PORT || 4000;
-const verifyToken = require('./src/routes/middlewares');
+
 
 const app = express();
 
@@ -19,6 +19,7 @@ app.use('/feimusic', routes.routesCancion);
 app.use('/feimusic', routes.routesSongLike);
 app.use('/feimusic', routes.routesAlbumLike);
 app.use('/feimusic', routes.routesArtistLike);
+app.use('/feimusic', routes.routesFiles);
 
 
 db.sequelize.sync().then(() => {
