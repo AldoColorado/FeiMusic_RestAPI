@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "potent-zodiac-317804",
+  "private_key_id": "cd3169b565c073d37f1077fad7f054e772cd9649",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCWKZKPJHFx0mU8\nGUixO2TRZqfgp4YjjaDzMcS83MiI8/P2NPnpCkhVobFOVPJ1CqeSM9Bw8XVlySG8\nvarWSKwjRdIJyev20M7ghkWjchWnJG9lldRroqmnMXMAO+nK+BCZ7I4hS+kqcxlR\nGr3aZEjRcug4EJE2FCgIipmav1XS8HixyYQJQS2xlx5PkuYRcoGc6HGmA6N0l1uN\nujXLS5TPAAn6r1l3M81qGplV72DAWEO6hCo8EQonwoQM0cPKz0oh8q3jZ3VFmmJ+\n+5rkUuWtVUyBp8ejPcFEoR1K+F/ogGLW8T+vQRxjV7jxSG4EvmCriw904HoiVedd\nWZo3qlbVAgMBAAECggEAB5We9kWVc0sjW4c9ZtzvSS0BsrT+GffygVtp//i41O4E\nIaiTAi8c8IejtdH66GglhvAWCaEF2HfHEUo/1uXscor5bQ7QBnM318WrE8fUidDV\nzZA6npskgtzaXaXTt7GS3mtr0bO3WbJe53v4deTrJqUX+ej1pKvHn918R6woBhOV\nKJDKXxxhi/0jvGwtAo5JBPgaUwVEafdgg+Zzk89WJcisY0Ui7k478DgYxaX18I+W\n64r3wYRNznSt3FZKOVi1vxl/AOLWQGDSjHlOvqwH/qYywJtKAbT39FW9YfwRecak\nC85DtVRiuXirhvhQizCcnbGyYwQqdEWghJ1tGFGg8QKBgQDHfPtQbRy1O1swVuzX\nYP33viM6XRx3EyfE+aVNuJ2agmylBft1uLnlWZgBBp2mPh6glWSd8AqcGbbadc0G\nCzFWnD3HIyWZd1AP/wOTs6mbA3RW4nyWHr7Nqsp/r2o2x7MOPkhFOIEhKV6M+lDq\n3UghJ677fu0FYOzSI7Sx6Mn2fQKBgQDAs3MXCpYu4qJLTMkpMrhleeMVjlufd23F\nrmrrotSZJBp6D3xBasjFmfL0QhBLUkymoLroqjex1YAEnWm58sszC0M7qe6UzmaO\nXKmalYOJvoAC+kGWNhcqQUw0EDJqabw2xiLjD97zad3EwogHfbuVUrnmxCrYSy5S\nmXuHTtVZOQKBgAl9qr9C0bDVqBr+p7n/hVW6GBb4wxfvM18tuW2fMPBe8ChRxort\nRPriblbuJ6X3IqHlOapB919B4e8215BIDArg2BeXVnycrpR0P4lRbOpRGcHgeKjz\nwYQrcgLtJ5J/occ1s16Ht60KONNgPWVPLdVV+/8/JKuy1tGQnVIxjxpJAoGBAL9E\nHnL7Tg/hYUcuQuhCcKZAMfZeY3DHoMw6j+OsrioGnMUUg7eGnxsK8AwjWnr4iB5H\noN14vmkjybpK5/rqE2hpwGUDCUzoBQE+1hUaXAIndHYAIYNP0vRc9Z8jiHb41hjj\n1xLa2Odv5+/5Sf1tfff7sYtsoD4peSQBNYwa4kZ5AoGAMNBBRXvU6CPQXlSXrHf4\n3Um2Y886vr8yjdHIvhzhu5LCIL2Te3wXL7NBUh3U3WPwj8ZX63sLpBluNSFHdOjS\nP9mwfoUfH+Ffur7ZaDuEzmdSVFbnAucs4KikEJEAlX/xlH+XtCXNW/YnXqHhE2Md\nYWYj4+ojSDcfSOJDwWQmTaA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "feimusicservice@potent-zodiac-317804.iam.gserviceaccount.com",
+  "client_id": "111209507199580392436",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/feimusicservice%40potent-zodiac-317804.iam.gserviceaccount.com"
+}

@@ -1,7 +1,7 @@
 const express = require('express');
 const routerCuenta = express.Router();
 const controller = require('../controller/cuentaDAO');
-const verifyToken = require('./middlewares');
+const verifyToken = require('../middlewares/checkToken');
 
 routerCuenta.get('/Cuenta',controller.getCuentas);
 routerCuenta.get('/Cuenta/:username', controller.getCuenta);
