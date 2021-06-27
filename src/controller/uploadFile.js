@@ -4,16 +4,15 @@ const path = require('path');
 const {Storage} = require('@google-cloud/storage');
 
 const googleCloud = new Storage({
-    keyFilename: path.join( 'C:/Users/Aldo/Desktop/FeiMusic_RestAPI/config/potent-zodiac-317804-cd3169b565c0.json'),
-    projectId: 'potent-zodiac-317804'
+    keyFilename: path.join( 'C:/Users/Aldo/Desktop/FeiMusic_RestAPI/config/fei-music-f55f6b7f278a.json'),
+    projectId: 'fei-music'
 });
 
-const feiMusicBucket = googleCloud.bucket('fei_music_files');
+const feiMusicBucket = googleCloud.bucket('fei_music_archivos');
 
 const multer = Multer({
     storage: Multer.memoryStorage(),
 })
-
 
 module.exports = {
     async uploadArchivo(req, res) {
@@ -27,6 +26,5 @@ module.exports = {
                 res.send(publicUrl);
             })
             blobStream.end(req.file.buffer); 
-        
     }
 }
