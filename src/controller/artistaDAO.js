@@ -33,6 +33,7 @@ module.exports = {
             nombreArtista: req.body.nombreArtista,
             imagenArtista: req.body.imagenArtista,
             descripcion: req.body.descripcion,
+            genero: req.body.genero,
             username: req.body.username    
         }).then(submitedArtista => res.send(submitedArtista));
     },
@@ -49,7 +50,6 @@ module.exports = {
         return database.Artista.update({
             nombreArtista: req.body.nombreArtista,
             imagenArtista: req.body.imagenArtista,
-            verificado: req.body.verificado  
         }, {
             where: {
                 idArtista: req.params.idArtista
