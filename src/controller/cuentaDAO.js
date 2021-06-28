@@ -70,6 +70,7 @@ module.exports = {
             username: req.body.username,
             correo: req.body.correo,
             password: req.body.password,
+            tipoUsuario: req.body.tipoUsuario
         }, {
             where: {
                 username: req.params.username

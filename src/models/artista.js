@@ -17,6 +17,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         descripcion: {
             type: Sequelize.STRING
+        },
+        genero: {
+            type: Sequelize.STRING
         }
     },{
         freezeTableName: true,     //Model tablename will be the same as the model
