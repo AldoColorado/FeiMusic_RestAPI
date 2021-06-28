@@ -9,29 +9,29 @@ module.exports = {
             {username: req.body.username}
         }).then(cuenta => {
             if(cuenta == null){
-                return res.json({
+                return res.status(404).json({
                     error: true,
-                    status: 'Usuario o contrasenia incorrecta'
+                    message: 'Usuario o contrasenia incorrecta'
                 })
             }
             if(!cuenta.username || !cuenta.password){
-                return res.json({
+                return res.status(404).json({
                     error: true,
-                    status: 'Usuario o contrasenia incorrecta'
+                    message: 'Usuario o contrasenia incorrecta'
                 });
             }else{
                 const contraseniaCorrecta = bcrypt.compareSync(req.body.password, cuenta.password, 10);
                 if(contraseniaCorrecta){  
-                    return res.json({
+                    return res.status(200).json({
                         username: cuenta.username,
                         authToken: token(cuenta),
                         tipoUsuario: cuenta.tipoUsuario,
                         status: 'Success'
                     })     
                 }else{
-                    return res.json({
+                    return res.status(404).json({
                         error: true,
-                        status: 'Usuario o contrasenia incorrecta'
+                        message: 'Usuario o contrasenia incorrecta'
                     })
                 }
             }
