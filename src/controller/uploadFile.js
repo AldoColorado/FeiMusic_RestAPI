@@ -25,7 +25,7 @@ module.exports = {
                 const publicUrl = `https://storage.googleapis.com/${feiMusicBucket.name}/${blob.name}`
                 res.status(200).json({
                     archivo: publicUrl
-                })
+                });
             })
             blobStream.end(req.file.buffer); 
     }
