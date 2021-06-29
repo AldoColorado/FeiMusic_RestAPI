@@ -23,7 +23,9 @@ module.exports = {
             blobStream.on("error", err => console.log(err));
             blobStream.on("finish", () => {
                 const publicUrl = `https://storage.googleapis.com/${feiMusicBucket.name}/${blob.name}`
-                res.send(publicUrl);
+                res.status(200).json({
+                    archivo: publicUrl
+                });
             })
             blobStream.end(req.file.buffer); 
     }
