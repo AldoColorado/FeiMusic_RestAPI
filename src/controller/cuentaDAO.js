@@ -1,7 +1,7 @@
 const express = require('express');
 const database = require("../models")
 const bcrypt = require('bcryptjs');
-const { check, validationResult} = require('express-validator');
+
 
 
 module.exports = {
@@ -66,6 +66,7 @@ module.exports = {
     },
 
     async updateCuenta(req, res) {
+        console.log(req.params.username)
         return database.Cuenta.update({
             username: req.body.username,
             correo: req.body.correo,
@@ -75,6 +76,8 @@ module.exports = {
             where: {
                 username: req.params.username
             }
-        }).then(() => res.send("Updated Cuenta"));
+        }).then(cuentaActualizada => res.json({
+            username: cuentaActualizada.username
+        }));
     }
 }

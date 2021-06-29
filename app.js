@@ -1,7 +1,9 @@
 const express = require('express');
 const db = require('./src/models');
+const { routesGenero } = require('./src/routes/routes');
 require('./src/controller/associations');
 const routes = require('./src/routes/routes');
+const { use } = require('./src/routes/routesGenero');
 const PORT = process.env.PORT || 4000;
 
 
@@ -20,7 +22,8 @@ app.use('/feimusic', routes.routesSongLike);
 app.use('/feimusic', routes.routesAlbumLike);
 app.use('/feimusic', routes.routesArtistLike);
 app.use('/feimusic', routes.routesFiles);
-
+app.use('/feimusic', routes.routesGenero);
+app.use('/feimusic', routes.routesEmailer);
 
 db.sequelize.sync().then(() => {
     app.listen(PORT, () => {
