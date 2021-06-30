@@ -29,8 +29,8 @@ module.exports = {
     },
 
     async buscarCancion(req, res) {
-        return database.Cancion.findAll({
-            attributes: ['idCancion', 'nombreCancion'],
+        return database.Cancion.findOne({
+            attributes: ['idCancion', 'nombreCancion', 'letra', 'imagenCancion', 'track', 'idAlbum', 'idGenero'],
             where: {
                 nombreCancion : req.params.nombreCancion
             }
