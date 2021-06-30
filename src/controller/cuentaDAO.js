@@ -40,7 +40,7 @@ module.exports = {
                             if(!submitedCuenta){
                                 res.sendStatus(400);
                             }else{
-                                res.status().json({
+                                res.status(200).json({
                                     username: submitedCuenta.username,
                                     correo: submitedCuenta.correo
                                 });

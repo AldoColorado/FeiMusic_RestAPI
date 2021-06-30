@@ -15,7 +15,7 @@ module.exports = {
         return database.Search.findAll({
             where: {
                 nombreRecurso: {
-                    [Op.like]: '%' + req.params.nombreRecurso + '%'
+                    [Op.startsWith]: req.params.nombreRecurso + '%' 
                 }
             }
         }).then(recursos => {

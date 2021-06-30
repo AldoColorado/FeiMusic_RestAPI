@@ -14,6 +14,7 @@ app.use(express.json({limit: "50mb", parameterLimit: 500000000 }));
 
 app.use('/feimusic', routes.routesCuenta);
 app.use('/feimusic', routes.routesConsumidor);
+app.use('/feimusic', routes.routesAlbum)
 app.use('/feimusic', routes.routesArtista);
 app.use('/feimusic', routes.routesConsumidor);
 app.use('/feimusic', routes.routesAuth);
