@@ -13,13 +13,13 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         letra: {
-            type: Sequelize.BLOB('long')
+            type: Sequelize.STRING(250)
         },
         imagenCancion: {
-            type: Sequelize.BLOB('long')
+            type: Sequelize.STRING(250)
         },
         track: {
-            type: Sequelize.BLOB('long')
+            type: Sequelize.STRING(250)
         }
     },{
         freezeTableName: true,     //Model tablename will be the same as the model
