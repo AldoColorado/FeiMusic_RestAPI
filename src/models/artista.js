@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull : false
         },
         imagenArtista: {
-            type: Sequelize.BLOB('long'),
+            type: Sequelize.STRING(250),
         },
         descripcion: {
             type: Sequelize.STRING

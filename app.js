@@ -24,6 +24,7 @@ app.use('/feimusic', routes.routesArtistLike);
 app.use('/feimusic', routes.routesFiles);
 app.use('/feimusic', routes.routesGenero);
 app.use('/feimusic', routes.routesEmailer);
+app.use('/feimusic', routes.routesSearch);
 
 db.sequelize.sync().then(() => {
     app.listen(PORT, () => {

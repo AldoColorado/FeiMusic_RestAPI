@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
             type: Sequelize.DATE
         },
         imagenAlbum: {
-            type: Sequelize.BLOB
+            type: Sequelize.STRING(200)
         },
     },{
         freezeTableName: true,     //Model tablename will be the same as the model

@@ -1,5 +1,7 @@
 const express = require('express');
-const database = require("../models")
+const database = require("../models");
+const controllerSearch = require('../controller/searchDAO');
+const search = require('../models/search');
 
 module.exports = {
 
@@ -45,19 +47,20 @@ module.exports = {
 
 
     async createCancion(req, res) {
+
             return database.Cancion.create({
-                idCancion: req.body.idCancion,
                 nombreCancion: req.body.nombreCancion,
                 letra: req.body.letra,
                 imagenCancion: req.body.imagenCancion,
                 track: req.body.track,
                 idAlbum: req.body.idAlbum,
                 idGenero: req.body.idGenero
-            }).then(submitedCancion => res.json({
+            }).then(submitedCancion => 
+                res.status(200).json({
                 idCancion: submitedCancion.idCancion,
                 nombreCancion: submitedCancion.nombreCancion
             }));
+            
     },
 
-  
 }
