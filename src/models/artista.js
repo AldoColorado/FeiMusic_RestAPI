@@ -18,9 +18,6 @@ module.exports = (sequelize, DataTypes) => {
         descripcion: {
             type: Sequelize.STRING
         },
-        idGenero: {
-            type: Sequelize.STRING
-        }
     },{
         freezeTableName: true,     //Model tablename will be the same as the model
         timestamps: false

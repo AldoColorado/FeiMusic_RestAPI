@@ -1,5 +1,7 @@
 const express = require('express');
 const database = require("../models");
+const Sequelize  = require('Sequelize');
+const Op = Sequelize.Op;
 
 module.exports = {
 
@@ -9,9 +11,12 @@ module.exports = {
     },
 
     async buscarSearch(req, res) {
+        
         return database.Search.findAll({
             where: {
-                nombreRecurso : req.params.nombreRecurso
+                nombreRecurso: {
+                    [Op.like]: '%' + req.params.nombreRecurso + '%'
+                }
             }
         }).then(recursos => {
             if(recursos == null){
