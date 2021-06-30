@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         descripcion: {
             type: Sequelize.STRING
         },
-        genero: {
+        idGenero: {
             type: Sequelize.STRING
         }
     },{

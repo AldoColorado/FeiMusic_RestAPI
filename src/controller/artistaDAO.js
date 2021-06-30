@@ -33,7 +33,7 @@ module.exports = {
             nombreArtista: req.body.nombreArtista,
             imagenArtista: req.body.imagenArtista,
             descripcion: req.body.descripcion,
-            genero: req.body.genero,
+            idGenero: req.body.idGenero,
             username: req.body.username    
         }).then(submitedArtista => res.send(submitedArtista));
     },
