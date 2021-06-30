@@ -27,7 +27,8 @@ module.exports = {
             idAlbum: req.body.idAlbum,
             nombreAlbum: req.body.nombreAlbum,
             anioLanzamiento: req.body.anioLanzamiento,
-            imagenAlbum: req.body.imagenAlbum
+            imagenAlbum: req.body.imagenAlbum,
+            idArtista: req.body.idArtista
         }).then(submitedAlbum => res.send(submitedAlbum));
     },
 

@@ -18,9 +18,7 @@ module.exports = {
             }
         }).then(artista => {
             if(artista == null){
-                return res.json({
-                    status: 'Not found'
-                })
+                return res.sendStatus(404);
             }else{
                 return res.status(200).send(artista)
             }
