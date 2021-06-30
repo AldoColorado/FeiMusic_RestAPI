@@ -26,7 +26,6 @@ module.exports = {
                         username: cuenta.username,
                         authToken: token(cuenta),
                         tipoUsuario: cuenta.tipoUsuario,
-                        status: 'Success'
                     })     
                 }else{
                     return res.status(404).json({

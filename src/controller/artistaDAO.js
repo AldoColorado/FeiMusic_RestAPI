@@ -9,6 +9,10 @@ module.exports = {
 
     async getArtista(req, res) {
         database.Artista.findOne({
+            include: {
+                model: database.Album,
+                attributes: ['idAlbum', 'nombreAlbum']
+            },
             where: {
                 username : req.params.username
             }
@@ -18,11 +22,7 @@ module.exports = {
                     status: 'Not found'
                 })
             }else{
-                return res.json({
-                   idArtista : artista.idArtista,
-                   nombreArtista : artista.nombreArtista,
-                   status : 'Success' 
-                })
+                return res.status(200).send(artista)
             }
         });
     },

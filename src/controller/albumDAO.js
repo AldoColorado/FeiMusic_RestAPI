@@ -14,6 +14,14 @@ module.exports = {
         }).then(album => res.send(album));
     },
 
+    async getAlbumByArtista(req, res) {
+        return database.Album.findAll({
+            where: {
+                idArtista : req.params.idArtista
+            }
+        }).then(album => res.send(album));
+    },
+
     async createAlbum(req, res) {
         return database.Album.create({
             idAlbum: req.body.idAlbum,
