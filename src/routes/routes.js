@@ -12,6 +12,8 @@ const routesFiles = require('./routesFiles');
 const routesGenero = require('./routesGenero');
 const routesEmailer = require('./routesEmailer');
 const routesSearch = require('./routesSearch');
+const routesListaReproduccion = require('./routesListaReproduccion')
+const routesListaCancion = require('./routesListaCancion')
 
 module.exports = {
     routesCuenta : routesCuenta,
@@ -26,5 +28,7 @@ module.exports = {
     routesFiles: routesFiles,
     routesGenero: routesGenero,
     routesEmailer: routesEmailer,
-    routesSearch: routesSearch
+    routesSearch: routesSearch,
+    routesListaReproduccion: routesListaReproduccion,
+    routesListaCancion: routesListaCancion
 }

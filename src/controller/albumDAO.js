@@ -9,7 +9,7 @@ module.exports = {
     async getAlbum(req, res) {
         return database.Album.findOne({
             where: {
-                idAlbum : req.params.idAlbum
+                nombreAlbum : req.params.nombreAlbum
             }
         }).then(album => res.send(album));
     },

@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
         nombre: {
             type: Sequelize.STRING(50),
             allowNull: false
+        },
+        imagenLista: {
+            type: Sequelize.STRING(200),
         }
     },{
         freezeTableName: true,     //Model tablename will be the same as the model
