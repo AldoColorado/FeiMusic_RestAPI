@@ -62,7 +62,7 @@ module.exports = {
             where: {
                 username: req.params.username
             }
-        }).then(() => res.send("Deleted Cuenta"));
+        }).then(() => res.sendStatus(200));
     },
 
     async updateCuenta(req, res) {

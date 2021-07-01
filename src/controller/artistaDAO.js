@@ -39,7 +39,7 @@ module.exports = {
     async deleteArtista(req, res) {
         return database.Artista.destroy({
             where: {
-                idArtista: req.params.idArtista
+                username: req.params.username
             }
         }).then(() => res.send("Deleted Artista"));
     },
