@@ -46,7 +46,7 @@ module.exports = {
     async deleteConsumidor(req, res) {
         return database.Consumidor.destroy({
             where: {
-                idConsumidor: req.params.idConsumidor
+                username: req.params.username
             }
         }).then(() => res.send("Deleted Consumidor"));
     },

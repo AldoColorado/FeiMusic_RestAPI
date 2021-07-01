@@ -45,7 +45,6 @@ module.exports = {
         });
     },
 
-
     async createCancion(req, res) {
 
             return database.Cancion.create({
@@ -61,6 +60,14 @@ module.exports = {
                 nombreCancion: submitedCancion.nombreCancion
             }));
             
+    },
+
+    async deleteCancion(req, res) {
+        return database.Cancion.destroy({
+            where: {
+                nombreCancion: req.params.nombreCancion
+            }
+        }).then(() => res.sendStatus(200));
     },
 
 }

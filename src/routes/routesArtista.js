@@ -5,7 +5,7 @@ const controller = require("../controller/artistaDAO");
 routerArtista.get('/Artista', controller.getArtistas);
 routerArtista.get('/Artista/:username', controller.getArtista);
 routerArtista.post('/Artista', controller.createArtista);
-routerArtista.delete('/Artista/:idArtista', controller.deleteArtista);
+routerArtista.delete('/Artista/:username', controller.deleteArtista);
 routerArtista.put('/Artista/:idArtista', controller.updateArtista);
 
 
