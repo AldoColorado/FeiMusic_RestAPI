@@ -40,3 +40,5 @@ database.ListaReproduccion.belongsTo(database.Consumidor, {foreignKey: "idConsum
 database.SongLike.hasOne(database.Cancion, {foreignKey: "idCancion"});
 database.ArtistLike.hasOne(database.Artista, {foreignKey: "idArtista"});
 database.AlbumLike.hasOne(database.Album, {foreignKey: "idAlbum"})
+database.ListaReproduccion.hasMany(database.ListaCancion, {foreignKey: "idListaReproduccion"})
+database.ListaCancion.hasOne(database.Cancion, {foreignKey: "idCancion"});
