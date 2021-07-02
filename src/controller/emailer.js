@@ -37,7 +37,7 @@ const sendEmail = (email) => {
 
 module.exports= {
     async EnviarEmail(req, res) {
-        const result = sendEmail(req.body.correo) 
+        sendEmail(req.body.correo) 
         res.json({
             code: codigo
         })

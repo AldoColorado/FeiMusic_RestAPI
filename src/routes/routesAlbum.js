@@ -3,7 +3,7 @@ const routerAlbum = express.Router();
 const controller = require("../controller/albumDAO");
 
 routerAlbum.get('/Album', controller.getAlbums);
-routerAlbum.get('/Album/:nombreAlbum', controller.getAlbum);
+routerAlbum.get('/Album/Nombre/:nombreAlbum', controller.getAlbum);
 routerAlbum.get('/Album/:idArtista', controller.getAlbumByArtista);
 routerAlbum.post('/Album', controller.createAlbum);
 routerAlbum.delete('/Album/:nombreAlbum', controller.deleteAlbum);

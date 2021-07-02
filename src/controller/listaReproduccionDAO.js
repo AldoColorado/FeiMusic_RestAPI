@@ -9,11 +9,11 @@ module.exports = {
     async getListasConsumidor(req, res){
         return database.ListaReproduccion.findAll({
             include: {
-                model: database.ListaCancion,
+                model: database.ListaCancion, as: "ListaCancion",
                 attributes: ['idCancion', 'idListaReproduccion'],
                 include: {
                     model: database.Cancion,
-                    attributes: ['idCancion', 'nombreCancion', 'imagenCancion']
+                    attributes: ['idCancion', 'nombreCancion', 'imagenCancion', 'track']
                 }
             },
             where: {
