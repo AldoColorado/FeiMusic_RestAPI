@@ -5,5 +5,6 @@ const verifyToken = require('../middlewares/checkToken');
 
 routerSongLike.get('/SongLike/:idConsumidor', controller.getSongLike);
 routerSongLike.post('/SongLike', controller.createSongLike);
+routerSongLike.delete('/SongLike', controller.deleteSongLike)
 
 module.exports = routerSongLike;

@@ -21,6 +21,19 @@ module.exports = {
             idCancion: req.body.idCancion,
             idConsumidor: req.body.idConsumidor
         }).then(submitedSongLike => res.send(submitedSongLike));
+    },
+
+    async deleteSongLike(req,res) {
+        return database.SongLike.destroy({where: 
+            {idCancion: req.body.idCancion,
+            idConsumidor: req.body.idConsumidor  }
+        }).then(songlike => {
+            if(!songlike){
+                res.sendStatus(404);
+            }else{
+                res.sendStatus(200)
+            }     
+        })
     }
 
 

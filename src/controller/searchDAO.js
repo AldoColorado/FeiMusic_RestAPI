@@ -27,5 +27,11 @@ module.exports = {
         });
     },
 
-
+    async deleteSearch(req, res) {
+        return database.Search.destroy({
+            where: {
+                nombreRecurso: req.params.nombreRecurso
+            }
+        }).then(() => res.sendStatus(200));
+    },
 }

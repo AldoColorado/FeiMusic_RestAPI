@@ -22,6 +22,19 @@ module.exports = {
             idAlbum: req.body.idAlbum,
             idConsumidor: req.body.idConsumidor
         }).then(submitedAlbumLike => res.send(submitedAlbumLike));
+    },
+
+    async deleteAlbumLike(req,res) {
+        return database.AlbumLike.destroy({where: 
+            {idAlbum: req.body.idAlbum,
+            idConsumidor: req.body.idConsumidor }
+        }).then(albumlike => {
+            if(!albumlike){
+                res.sendStatus(404);
+            }else{
+                res.sendStatus(200)
+            }     
+        })
     }
 
 }
