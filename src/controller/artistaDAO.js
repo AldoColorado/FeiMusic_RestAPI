@@ -9,10 +9,6 @@ module.exports = {
 
     async getArtista(req, res) {
         database.Artista.findOne({
-            include: {
-                model: database.Album,
-                attributes: ['idAlbum', 'nombreAlbum']
-            },
             where: {
                 username : req.params.username
             }
@@ -24,6 +20,22 @@ module.exports = {
             }
         });
     },
+
+    async getArtistaByNombre(req, res) {
+        database.Artista.findOne({
+            where: {
+                nombreArtista : req.params.nombreArtista
+            }
+        }).then(artista => {
+            if(artista == null){
+                return res.sendStatus(404);
+            }else{
+                return res.status(200).send(artista)
+            }
+        });
+    },
+
+
 
     async createArtista(req, res) {
         return database.Artista.create({
