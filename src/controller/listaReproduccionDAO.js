@@ -30,13 +30,13 @@ module.exports = {
     },
 
     async createListaReproduccion(req, res) {
-        return database.listaReproduccion.create(req.body).then(submitedLista => res.send(submitedLista));
+        return database.ListaReproduccion.create(req.body).then(submitedLista => res.send(submitedLista));
     },
 
     async deleteListaReproduccion(req, res) {
-        return database.listaReproduccion.destroy({
+        return database.ListaReproduccion.destroy({
             where: {
-                nombreListaReproduccion: req.params.nombreListaReproduccion
+                nombre: req.params.nombre
             }
         }).then(() => res.sendStatus(200));
     },
