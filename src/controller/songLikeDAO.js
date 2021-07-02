@@ -26,7 +26,7 @@ module.exports = {
     async deleteSongLike(req,res) {
         return database.SongLike.destroy({where: 
             {idCancion: req.body.idCancion,
-            idConsumidor: req.body.idConsumidor  }
+            idConsumidor: req.body.idConsumidor}
         }).then(songlike => {
             if(!songlike){
                 res.sendStatus(404);

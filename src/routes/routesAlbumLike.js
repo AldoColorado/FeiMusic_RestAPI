@@ -5,6 +5,6 @@ const verifyToken = require('../middlewares/checkToken');
 
 routerAlbumLike.get('/AlbumLike/:idConsumidor', controller.getAlbumLike);
 routerAlbumLike.post('/AlbumLike', controller.createAlbumLike);
-routerAlbumLike.delete('/AlbumLike', controller.deleteAlbumLike);
+routerAlbumLike.put('/AlbumLike', controller.deleteAlbumLike);
 
 module.exports = routerAlbumLike;
