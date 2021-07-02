@@ -6,7 +6,7 @@ routerConsumidor.get('/Consumidor', controller.getConsumidores);
 routerConsumidor.get('/Consumidor/:username', controller.getConsumidor);
 routerConsumidor.post('/Consumidor', controller.createConsumidor);
 routerConsumidor.delete('/Consumidor/:username', controller.deleteConsumidor);
-routerConsumidor.put('/Consumidor/:idConsumidor', controller.updateConsumidor);
+routerConsumidor.put('/Consumidor/:username', controller.updateConsumidor);
 
 
 module.exports = routerConsumidor;

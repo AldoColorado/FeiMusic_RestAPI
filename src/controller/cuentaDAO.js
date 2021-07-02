@@ -76,8 +76,6 @@ module.exports = {
             where: {
                 username: req.params.username
             }
-        }).then(cuentaActualizada => res.json({
-            username: cuentaActualizada.username
-        }));
+        }).then(cuentaActualizada => res.sendStatus(200))
     }
 }
