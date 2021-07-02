@@ -19,11 +19,9 @@ module.exports = {
             }
         }).then(consumidor => {
             if(consumidor == null){
-                return res.json({
-                    status: 'Not found'
-                });
+                return res.sendStatus(404);
             }else{
-                return res.json({
+                return res.status(200).json({
                     idConsumidor: consumidor.idConsumidor,
                     nombre: consumidor.nombre,
                     apellidos: consumidor.apellidos,

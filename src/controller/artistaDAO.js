@@ -41,7 +41,7 @@ module.exports = {
             where: {
                 username: req.params.username
             }
-        }).then(() => res.send("Deleted Artista"));
+        }).then(() => res.sendStatus(200));
     },
 
     async updateArtista(req, res) {
