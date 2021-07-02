@@ -50,8 +50,8 @@ module.exports = {
             imagenArtista: req.body.imagenArtista,
         }, {
             where: {
-                idArtista: req.params.idArtista
+                username: req.params.username
             }
-        }).then(() => res.send("Updated Artista"));
+        }).then(() => res.sendStatus(200));
     }
 }

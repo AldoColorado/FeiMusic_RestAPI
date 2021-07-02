@@ -11,7 +11,13 @@ module.exports = {
             where: {
                 nombreAlbum : req.params.nombreAlbum
             }
-        }).then(album => res.send(album));
+        }).then(album => {
+            if(album == null){
+                res.sendStatus(404)
+            }else{
+                res.status(200).send(album)
+            }
+        });
     },
 
     async getAlbumByArtista(req, res) {
@@ -19,7 +25,14 @@ module.exports = {
             where: {
                 idArtista : req.params.idArtista
             }
-        }).then(album => res.send(album));
+        }).then(album => {
+            if(album.length == 0){
+                res.sendStatus(404)
+            }else{
+                res.status(200).send(album)
+            }
+            }
+        );
     },
 
     async createAlbum(req, res) {
@@ -29,15 +42,15 @@ module.exports = {
             anioLanzamiento: req.body.anioLanzamiento,
             imagenAlbum: req.body.imagenAlbum,
             idArtista: req.body.idArtista
-        }).then(submitedAlbum => res.send(submitedAlbum));
+        }).then(submitedAlbum => res.status(200).send(submitedAlbum));
     },
 
     async deleteAlbum(req, res) {
         return database.Album.destroy({
             where: {
-                idAlbum: req.params.idAlbum
+                nombreAlbum: req.params.nombreAlbum
             }
-        }).then(() => res.send("Deleted Album"));
+        }).then(() => res.sendStatus(200));
     },
 
     async updateAlbum(req, res) {
@@ -47,8 +60,8 @@ module.exports = {
             imagenAlbum: req.body.imagenAlbum
         }, {
             where: {
-                idAlbum: req.params.idAlbum
+                nombreAlbum: req.params.nombreAlbum
             }
-        }).then(() => res.send("Updated Album"));
+        }).then(() => res.sendStatus(200));
     }
 }

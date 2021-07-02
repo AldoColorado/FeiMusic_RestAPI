@@ -58,8 +58,8 @@ module.exports = {
             apellidos: req.body.apellidos
         }, {
             where: {
-                idConsumidor: req.params.idConsumidor
+                username: req.params.username
             }
-        }).then(() => res.send("Updated Consumidor"));
+        }).then(() => res.sendStatus(200));
     }
 }
