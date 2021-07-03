@@ -8,7 +8,7 @@ module.exports = {
         return database.SongLike.findAll({
             include: {
                 model: database.Cancion,
-                attributes: ['idCancion', 'nombreCancion']
+                attributes: ['idCancion', 'nombreCancion', 'imagenCancion', 'track']
             },
             where: {
                 idConsumidor : req.params.idConsumidor
@@ -26,7 +26,7 @@ module.exports = {
     async deleteSongLike(req,res) {
         return database.SongLike.destroy({where: 
             {idCancion: req.body.idCancion,
-            idConsumidor: req.body.idConsumidor}
+            idConsumidor: req.body.idConsumidor  }
         }).then(songlike => {
             if(!songlike){
                 res.sendStatus(404);
