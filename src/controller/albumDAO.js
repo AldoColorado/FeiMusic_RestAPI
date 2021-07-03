@@ -8,6 +8,10 @@ module.exports = {
 
     async getAlbum(req, res) {
         return database.Album.findOne({
+            include: {
+                model: database.Cancion, as: "Cancion",
+                attributes: ['idCancion', 'nombreCancion', 'imagenCancion', 'track']
+            },
             where: {
                 nombreAlbum : req.params.nombreAlbum
             }

@@ -7,7 +7,7 @@ database.Artista.belongsTo(database.Cuenta, {foreignKey: 'username' });
 database.Cuenta.hasOne(database.Consumidor, {foreignKey: "username"});
 database.Consumidor.belongsTo(database.Cuenta, {foreignKey: "username"});
 // Album-Cancion
-database.Album.hasMany(database.Cancion, {foreignKey: 'idAlbum' });
+database.Album.hasMany(database.Cancion, {as: 'Cancion', foreignKey: 'idAlbum' });
 database.Cancion.belongsTo(database.Album, {foreignKey: 'idAlbum' });
 // Album-Artista
 database.Album.belongsTo(database.Artista, {foreignKey: 'idArtista' });
