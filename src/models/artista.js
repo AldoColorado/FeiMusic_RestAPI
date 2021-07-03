@@ -23,21 +23,5 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
 
-    // Artista.associate = models =>{
-    //     Artista.belongsTo(models.Cuenta, {foreignKey: 'username' });
-    // };
-
-    // Artista.associate = models =>{
-    //     Artista.hasMany(models.Album, {foreignKey: 'idArtista' });
-    // };   
-
-    // Artista.associate = models =>{
-    //     Artista.belongsTo(models.Genero, {foreignKey: 'idGenero' });
-    // };
-
-    // Artista.associate = models =>{
-    //     Artista.belongsToMany(models.Consumidor, {through: 'ArtistLike', foreignKey: 'idArtista', otherKey: 'idConsumidor'});
-    // }
-
     return Artista;
 }

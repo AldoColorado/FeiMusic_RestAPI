@@ -24,13 +24,5 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
 
-    // Cuenta.associate = models =>{
-    //     Cuenta.hasOne(models.Consumidor, {foreignKey: "username"});
-    // };
-
-    // Cuenta.associate = models =>{
-    //     Cuenta.hasOne(models.Artista, {foreignKey: "username"});
-    // };
-
     return Cuenta;
 }

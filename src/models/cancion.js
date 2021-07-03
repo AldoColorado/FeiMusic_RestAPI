@@ -26,22 +26,5 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
 
-    // Cancion.associate = models =>{
-    //     Cancion.belongsTo(models.Album, {foreignKey: 'idAlbum' });
-    // };
-
-    // Cancion.associate = models =>{
-    //     Cancion.belongsTo(models.Genero, {foreignKey: 'idGenero' });
-    // };
-
-    // Cancion.associate = models =>{
-    //     Cancion.belongsToMany(models.ListaReproduccion, {through: 'ListaCancion', foreignKey: 'idCancion', otherKey: 'idListaReproduccion'} );
-    // };
-
-    // Cancion.associate = models =>{
-    //     Cancion.belongsToMany(models.Consumidor, {through: 'SongLike', foreignKey: 'idCancion', otherKey: 'idConsumidor'});
-    // }
-
-
     return Cancion;
 }

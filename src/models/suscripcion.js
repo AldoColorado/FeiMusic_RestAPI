@@ -23,9 +23,5 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     });
 
-    // Suscripcion.associate = models =>{
-    //     Suscripcion.belongsTo(models.Consumidor, {foreignKey: 'idConsumidor' });
-    // };
-  
     return Suscripcion;
 }
